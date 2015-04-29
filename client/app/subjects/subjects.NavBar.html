@@ -1,0 +1,6 @@
+<h3>Navigate by subject</h3>
+<ul class="nav nav-pills" role="tablist">
+	<li ng-repeat="subject in subjectsCountList" role="presentation">
+		<a ui-sref="documents.subject({ subject : subject._id })">{{ subject._id }} <span class="badge">{{ subject.count }}</span></a>
+	</li>
+</ul>

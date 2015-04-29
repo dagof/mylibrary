@@ -1,0 +1,138 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'canonical-path' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose cache add [ 'canonical-path', null ]
+6 verbose cache add name=undefined spec="canonical-path" args=["canonical-path",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'canonical-path',
+7 verbose parsed url   path: 'canonical-path',
+7 verbose parsed url   href: 'canonical-path' }
+8 silly lockFile 741d6e9c-canonical-path canonical-path
+9 verbose lock canonical-path C:\Users\DagoFlores\AppData\Roaming\npm-cache\741d6e9c-canonical-path.lock
+10 silly lockFile 741d6e9c-canonical-path canonical-path
+11 silly lockFile 741d6e9c-canonical-path canonical-path
+12 verbose addNamed [ 'canonical-path', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 949eac22-canonical-path canonical-path@
+15 verbose lock canonical-path@ C:\Users\DagoFlores\AppData\Roaming\npm-cache\949eac22-canonical-path.lock
+16 silly addNameRange { name: 'canonical-path', range: '*', hasData: false }
+17 verbose request where is /canonical-path
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id b8b997d8cf203269
+20 verbose url raw /canonical-path
+21 verbose url resolving [ 'https://registry.npmjs.org/', './canonical-path' ]
+22 verbose url resolved https://registry.npmjs.org/canonical-path
+23 verbose request where is https://registry.npmjs.org/canonical-path
+24 info trying registry request attempt 1 at 09:07:00
+25 verbose etag "16C4RDZHT2W7BLWDG20G9A8F3"
+26 http GET https://registry.npmjs.org/canonical-path
+27 http 304 https://registry.npmjs.org/canonical-path
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Mon, 27 Apr 2015 13:06:58 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Mon, 27 Apr 2015 13:06:58 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"16C4RDZHT2W7BLWDG20G9A8F3"',
+28 silly registry.get     age: '56',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-atl6221-ATL',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1430140018.490551,VS0,VE0',
+28 silly registry.get     vary: 'Accept' } ]
+29 verbose etag https://registry.npmjs.org/canonical-path from cache
+30 silly addNameRange number 2 { name: 'canonical-path', range: '*', hasData: true }
+31 silly addNameRange versions [ 'canonical-path', [ '0.0.1', '0.0.2' ] ]
+32 verbose addNamed [ 'canonical-path', '0.0.2' ]
+33 verbose addNamed [ '0.0.2', '0.0.2' ]
+34 silly lockFile 59212999-canonical-path-0-0-2 canonical-path@0.0.2
+35 verbose lock canonical-path@0.0.2 C:\Users\DagoFlores\AppData\Roaming\npm-cache\59212999-canonical-path-0-0-2.lock
+36 silly lockFile 59212999-canonical-path-0-0-2 canonical-path@0.0.2
+37 silly lockFile 59212999-canonical-path-0-0-2 canonical-path@0.0.2
+38 silly lockFile 949eac22-canonical-path canonical-path@
+39 silly lockFile 949eac22-canonical-path canonical-path@
+40 silly resolved [ { name: 'canonical-path',
+40 silly resolved     version: '0.0.2',
+40 silly resolved     description: 'paths that always use forward slashes',
+40 silly resolved     main: 'index.js',
+40 silly resolved     scripts: { test: 'jasmine-node index.spec.js' },
+40 silly resolved     repository:
+40 silly resolved      { type: 'git',
+40 silly resolved        url: 'https://github.com/petebacondarwin/node-canonical-path' },
+40 silly resolved     keywords: [ 'path', 'forward', 'slashes', 'OS' ],
+40 silly resolved     author: { name: 'Pete Bacon Darwin' },
+40 silly resolved     license: 'MIT',
+40 silly resolved     devDependencies: { 'jasmine-node': '~1.12.0' },
+40 silly resolved     readme: '# Canonical Path Utility\r\n\r\nWhen writing node.js code that must support Windows and *nix OSes, it is sometimes frustrating\r\nthat path segments are separated differently depending upon the environment.\r\n\r\nIronically, we can pass in paths with either separator and the library will normalize it to the\r\ncurrent OS\'s format. But it then returns paths using the current OS\'s separator.\r\n\r\nThis utility simple wraps the built-in `path` library such that it only ever returns path segments\r\nseparated by forward slashes (/).\r\n\r\n## Installation\r\n\r\n```\r\nnpm install --save canonical-path\r\n```\r\n\r\n## Usage\r\n\r\n```\r\nvar path = require(\'canonical-path\');\r\n\r\nvar p = path.normalize(\'a/b/../c\');\r\n// p === \'a/c\';\r\n```\r\n\r\n## Testing\r\n\r\n```\r\nnpm test\r\n``` ',
+40 silly resolved     readmeFilename: 'README.md',
+40 silly resolved     _id: 'canonical-path@0.0.2',
+40 silly resolved     dist:
+40 silly resolved      { shasum: 'e31eb937a8c93ee2a01df1839794721902874574',
+40 silly resolved        tarball: 'http://registry.npmjs.org/canonical-path/-/canonical-path-0.0.2.tgz' },
+40 silly resolved     _from: 'canonical-path@',
+40 silly resolved     _npmVersion: '1.2.14',
+40 silly resolved     _npmUser: { name: 'petebd', email: 'pete@bacondarwin.com' },
+40 silly resolved     maintainers: [ [Object] ],
+40 silly resolved     directories: {},
+40 silly resolved     _shasum: 'e31eb937a8c93ee2a01df1839794721902874574',
+40 silly resolved     _resolved: 'https://registry.npmjs.org/canonical-path/-/canonical-path-0.0.2.tgz',
+40 silly resolved     bugs: { url: 'https://github.com/petebacondarwin/node-canonical-path/issues' },
+40 silly resolved     homepage: 'https://github.com/petebacondarwin/node-canonical-path' } ]
+41 info install canonical-path@0.0.2 into C:\Users\DagoFlores\AppData\Roaming\npm
+42 info installOne canonical-path@0.0.2
+43 verbose node_modules\canonical-path unbuild
+44 verbose tar unpack C:\Users\DagoFlores\AppData\Roaming\npm-cache\canonical-path\0.0.2\package.tgz
+45 silly lockFile bd9274ca--npm-node-modules-canonical-path tar://C:\Users\DagoFlores\AppData\Roaming\npm\node_modules\canonical-path
+46 verbose lock tar://C:\Users\DagoFlores\AppData\Roaming\npm\node_modules\canonical-path C:\Users\DagoFlores\AppData\Roaming\npm-cache\bd9274ca--npm-node-modules-canonical-path.lock
+47 silly lockFile 881367cc-canonical-path-0-0-2-package-tgz tar://C:\Users\DagoFlores\AppData\Roaming\npm-cache\canonical-path\0.0.2\package.tgz
+48 verbose lock tar://C:\Users\DagoFlores\AppData\Roaming\npm-cache\canonical-path\0.0.2\package.tgz C:\Users\DagoFlores\AppData\Roaming\npm-cache\881367cc-canonical-path-0-0-2-package-tgz.lock
+49 silly gunzTarPerm modes [ '777', '666' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry .npmignore
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm extractEntry index.js
+54 silly gunzTarPerm extractEntry index.spec.js
+55 silly lockFile bd9274ca--npm-node-modules-canonical-path tar://C:\Users\DagoFlores\AppData\Roaming\npm\node_modules\canonical-path
+56 silly lockFile bd9274ca--npm-node-modules-canonical-path tar://C:\Users\DagoFlores\AppData\Roaming\npm\node_modules\canonical-path
+57 silly lockFile 881367cc-canonical-path-0-0-2-package-tgz tar://C:\Users\DagoFlores\AppData\Roaming\npm-cache\canonical-path\0.0.2\package.tgz
+58 silly lockFile 881367cc-canonical-path-0-0-2-package-tgz tar://C:\Users\DagoFlores\AppData\Roaming\npm-cache\canonical-path\0.0.2\package.tgz
+59 info preinstall canonical-path@0.0.2
+60 verbose readDependencies using package.json deps
+61 verbose readDependencies using package.json deps
+62 silly resolved []
+63 verbose about to build C:\Users\DagoFlores\AppData\Roaming\npm\node_modules\canonical-path
+64 info build C:\Users\DagoFlores\AppData\Roaming\npm\node_modules\canonical-path
+65 verbose linkStuff [ true,
+65 verbose linkStuff   'C:\\Users\\DagoFlores\\AppData\\Roaming\\npm\\node_modules',
+65 verbose linkStuff   true,
+65 verbose linkStuff   'C:\\Users\\DagoFlores\\AppData\\Roaming\\npm\\node_modules' ]
+66 info linkStuff canonical-path@0.0.2
+67 verbose linkBins canonical-path@0.0.2
+68 verbose linkMans canonical-path@0.0.2
+69 verbose rebuildBundles canonical-path@0.0.2
+70 info install canonical-path@0.0.2
+71 info postinstall canonical-path@0.0.2
+72 error peerinvalid The package generator-karma does not satisfy its siblings' peerDependencies requirements!
+72 error peerinvalid Peer generator-angular@0.10.0 wants generator-karma@>=0.8.2
+72 error peerinvalid Peer generator-express-angular@0.2.8 wants generator-karma@~0.5.0
+73 error System Windows_NT 6.1.7601
+74 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "canonical-path"
+75 error cwd C:\inetpub\wwwroot\yoan
+76 error node -v v0.10.32
+77 error npm -v 1.4.28
+78 error code EPEERINVALID
+79 verbose exit [ 1, true ]

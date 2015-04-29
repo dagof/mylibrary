@@ -1,0 +1,39 @@
+<div ng-controller="SearchController" class="form-group" width="90%">
+	<form id="frmSearch" name="frmSearch" role="form">
+		<p>Tape a title or subject and then choose one book from the results list.</p>
+		<table align="center">
+			<tr>
+				<td>
+					<input id="txtSearch" placeholder="Type a title or subject..." class="form-control" ng-model="txtSearch" ng-change="onTextChange()" />
+				</td>
+			</tr>
+			<tr>
+				<td id="searchResultsList">
+					<table class="table {{ (booksList == undefined) ? 'hidden' : 'show' }}">
+						<tr ng-repeat="book in booksList.items">
+							<td valign="top">
+								<a ui-sref="documents.detail({ id: book.id })" ui-sref-active="active" name="doc_{{ book.id }}">
+									<img src="{{ book.volumeInfo.imageLinks.smallThumbnail }}" border="0" alt="">
+								</a>
+							</td>
+							<td>
+								<a ui-sref="documents.detail({ id: book.id })" ui-sref-active="active" name="doc_{{ book.id }}">
+									<strong>Title</strong>: {{ book.volumeInfo.title }} 
+								</a>
+								<br />
+								<strong>Subtitle</strong>: {{ book.volumeInfo.subtitle }} 
+								<br />
+								<strong>Authors</strong>: 
+								<br />
+								<div id="authors" ng-repeat="author in book.volumeInfo.authors">
+									{{ author }}, <br />
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<p>&nbsp;</p>
+</div>

@@ -1,0 +1,6 @@
+<div ng-controller="SubjectsListController">
+	<h4>Select a subject</h4>
+	<select name="subject" ng-model="subject" ng-options="subject.name for subject in subjectsList">
+		<option value="">-- choose a subject --</option>
+	</select>
+</div>

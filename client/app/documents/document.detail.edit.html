@@ -1,0 +1,72 @@
+<h3>Book Details</h3>
+<div ng-controller="BookInfoController">
+	<div class="form-group">
+		<br />
+		<form id="frmBook" name="frmBook" method="POST" action="#">
+			<table width="100%" cellspacing="3" cellpadding="3">
+				<tr>
+					<td valign="top">
+						<img src="{{ bookInfo.volumeInfo.imageLinks.smallThumbnail }}" alt="">
+					</td>
+					<td valign="top">
+						<table class="table">
+							<tr>
+								<td valign="top">
+									<label for="txtTitle">Title</label>
+									<input id="txtTitle" type="text" class="form-control" value="{{ bookInfo.volumeInfo.title }}" />
+									<br />
+									<label for="txtSubtitle">Subtitle</label>
+									<input id="txtSubtitle" type="text" class="form-control" value="{{ bookInfo.volumeInfo.subtitle }}" />
+									<br />
+									<label for="txtPublisher">Publisher</label>
+									<input id="txtPublisher" type="text" class="form-control" value="{{ bookInfo.volumeInfo.publisher }}" />
+									<br />
+									<label for="txtPublishedDate">Published Date</label>
+									<input id="txtPublishedDate" type="text" class="form-control" value="{{ bookInfo.volumeInfo.publishedDate }}" />
+									<br />
+									<label for="txtISBN10">ISBN 10</label>
+									<input id="txtISBN10" type="text" class="form-control" value="{{ bookInfo.volumeInfo.industryIdentifiers[0].identifier }}" />
+									<br />
+									<label for="txtISBN13">ISBN 13</label>
+									<input id="txtISBN13" type="text" class="form-control" value="{{ bookInfo.volumeInfo.industryIdentifiers[1].identifier }}" />
+								</td>
+								<td valign="top">
+									<label for="txtAuthors">Authors</label>
+									<ul class="list-group">
+										<li class="list-group-item" ng-repeat="author in bookInfo.volumeInfo.authors">{{ author }}</li>
+									</ul>
+									<br />
+									<label for="txtCategories">Categories</label>
+									<ul class="list-group">
+										<li class="list-group-item" ng-repeat="category in bookInfo.volumeInfo.categories">{{ category }}</li>
+									</ul>
+									<br />
+									<label for="txtPages">Pages</label>
+									<input id="txtPages" type="text" class="form-control" value="{{ bookInfo.volumeInfo.pageCount }}" />
+									<br />
+									<label for="txtCountry">Country</label>
+									<input id="txtCountry" type="text" class="form-control" value="{{ bookInfo.accessInfo.country }}" />
+									<br />
+									<label for="txtLanguage">Language</label>
+									<input id="txtLanguage" type="text" class="form-control" value="{{ bookInfo.volumeInfo.language }}" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" colspan="2">
+									<label for="txtDescription">Description</label>
+									<div>{{ bookInfo.volumeInfo.description }}</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td align="center">
+						<input type="submit" class="btn btn-primary" value="Submit" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>

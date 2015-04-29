@@ -1,0 +1,37 @@
+<div ng-controller="DocumentListController">
+	<h2>{{ subjectTitle }}</h2>
+	<h3>Books list</h3><br />
+	<div ng-repeat="doc in documentsList">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<b>{{ doc.title }}</b><br />{{ doc.subtitle }}
+				</h3>
+			</div>
+			<div class="panel-body">
+				<table class="BookDetails">
+					<tr>
+						<td valign="top"><b>Id</b></td>
+						<td valign="top">{{ doc._id }}</td>
+					</tr>
+					<tr>
+						<td valign="top"><b>Authors</b></td>
+						<td valign="top"><span ng-repeat="author in doc.authors">{{ author }},</span></td>
+					</tr>
+					<tr>
+						<td valign="top"><b>Pages</b></td>
+						<td valign="top">{{ doc.pages }}</td>
+					</tr>
+					<tr>
+						<td valign="top"><b>Description</b></td>
+						<td valign="top">{{ doc.description.substr(0, 150) }}...</td>
+					</tr>
+				</table>
+			</div>
+			<div class="panel-footer" align="right">
+				<button class="btn btn-danger" ng-click="deleteDocument(doc)"> REMOVE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<p>&nbsp;</p>

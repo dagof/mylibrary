@@ -1,0 +1,99 @@
+<h3>Book Details</h3>
+<div ng-controller="BookInfoController">
+	<br />
+	<form name="frmNewDocument" ng-submit="newDocument()">
+	<table width="100%" cellspacing="8" cellpadding="3">
+		<colgroup>
+			<col width="30%" />
+			<col width="70%" />
+		</colgroup>
+		<tr>
+			<td valign="top">
+				<img src="{{ bookInfo.volumeInfo.imageLinks.small }}" alt="">
+				<p>&nbsp;</p>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Actions</h3>
+					</div>
+					<div class="panel-body">
+						<!-- <div ui-view="viewNewDocument"></div>
+						<div ng-include="'/subjects/subjectsMenuOptions.html'"></div> -->
+						<h4>Select a subject</h4>
+						<select name="subject" ng-model="subject" ng-options="subject.name for subject in subjectsList">
+							<option value="">-- choose a subject --</option>
+						</select>
+						<p>&nbsp;</p>
+						<input type="submit" value="Add Document" class="btn btn-success">
+					</div>
+				</div>
+			</td>
+			<td valign="top" align="right">
+				<table>
+					<tr>
+						<td valign="top">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">General Information</h3>
+								</div>
+								<div class="panel-body">
+									<label>Title</label><br />{{ bookInfo.volumeInfo.title.trim() }}
+									<br /><br />
+									<label>Subtitle</label><br />{{ bookInfo.volumeInfo.subtitle.trim() }}
+									<br /><br />
+									<label>Authors</label><br />
+									<ul class="list-group">
+										<li class="list-group-item" ng-repeat="author in bookInfo.volumeInfo.authors">{{ author.trim() }}</li>
+									</ul>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Publisher Information</h3>
+								</div>
+								<div class="panel-body">
+									<label>Name</label><br />{{ bookInfo.volumeInfo.publisher.trim() }}
+									<br /><br />
+									<label>Date</label><br />{{ bookInfo.volumeInfo.publishedDate }}
+									<br /><br />
+									<label>ISBN 10</label><br />{{ bookInfo.volumeInfo.industryIdentifiers[0].identifier }}
+									<br /><br />
+									<label>ISBN 13</label><br />{{ bookInfo.volumeInfo.industryIdentifiers[1].identifier }}
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Details</h3>
+								</div>
+								<div class="panel-body">
+									<label>Categories</label><br />
+									<ul class="list-group">
+										<li class="list-group-item" ng-repeat="category in bookInfo.volumeInfo.categories">{{ category }}</li>
+									</ul>
+									<br />
+									<label>Pages</label><br />{{ bookInfo.volumeInfo.pageCount }}
+									<br /><br />
+									<label>Country</label><br />{{ bookInfo.accessInfo.country }}
+									<br /><br />
+									<label>Language</label><br />{{ bookInfo.volumeInfo.language }}
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="2">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Description</h3>
+					</div>
+					<div class="panel-body">
+						<div>{{ bookInfo.volumeInfo.description }}</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>

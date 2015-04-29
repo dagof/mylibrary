@@ -1,0 +1,66 @@
+{
+  "name": "MyLibrary_client",
+  "version": "0.0.1",
+  "description": "Client side of MyLibrary app.",
+  "keywords" : ["MyLibrary","mongodb","angular","angular-ui-router"],
+  "homepage": "http://www.dagoflores.ca/projects/my-library/",
+  "author" : {
+    "name" : "Dago Flores",
+    "email" : "info@dagoflores.ca",
+    "url" : "http://www.dagoflores.ca"
+  },
+  "private": false,
+  "dependencies": {
+    "angular-ui-router": "^0.2.14",
+    "bin-check": "^1.0.0",
+    "bin-version-check": "^2.1.0",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "imagemin-gifsicle": "^4.1.0",
+    "imagemin-jpegtran": "^4.1.0",
+    "imagemin-optipng": "^4.2.0",
+    "imagemin-pngquant": "^4.1.0",
+    "inherits": "^2.0.1",
+    "lodash": "^3.7.0",
+    "mongodb": "^2.0.27",
+    "mongoose": "^4.0.1",
+    "requirejs": "^2.1.17"
+  },
+  "devDependencies": {
+    "canonical-path": "0.0.2",
+    "dgeni": "^0.4.1",
+    "dgeni-packages": "^0.10.13",
+    "grunt": "^0.4.1",
+    "grunt-autoprefixer": "^0.7.3",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-imagemin": "^0.8.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-filerev": "^0.2.1",
+    "grunt-google-cdn": "^0.4.0",
+    "grunt-karma": "^0.10.1",
+    "grunt-newer": "^0.7.0",
+    "grunt-ng-annotate": "^0.4.0",
+    "grunt-svgmin": "^0.4.0",
+    "grunt-usemin": "^2.1.1",
+    "grunt-wiredep": "^1.7.0",
+    "jshint-stylish": "^0.2.0",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
