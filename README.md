@@ -2,6 +2,8 @@
 
 > A learning purposes project developed with latest technologies for both sides: server and client. It's a simple Library WebApp where books are stored under subjects. They can be removed too. You can watch the transactions in both sides.
 
+URL: http://www.dagoflores.ca/projects/my-library/
+
 ## Getting Started
 ### Step 0
 Be sure that **npm**, **Bower**, **Grunt**, and **MongoDB Server** latest stable versions have been installed in your computer. All modules will be installed in the following steps.
