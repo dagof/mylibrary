@@ -21,7 +21,7 @@ Go to `server` folder and install the dependencies executing the `npm install` c
 Open `init.js` file located in `server\node_modules\express\lib\middleware` folder using notepad or other text editor.
 
 ### Step 5
-Add the Cross-site HTTP requests permissions to be able to get data from server using **Cross-Origin Resource Sharing (CORS)** mechanism. Details here.
+Add the Cross-site HTTP requests permissions to be able to get data from server using **Cross-Origin Resource Sharing (CORS)** mechanism. More details (here)[http://www.dagoflores.ca/2015/05/cors/].
 
 ### Step 6
 Test the server:
