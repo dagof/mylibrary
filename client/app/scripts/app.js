@@ -2,10 +2,10 @@
 
 /**
  * 
- * @name yoanApp
+ * @name myLibraryApp
  * @description
- * # yoanApp
+ * # myLibraryApp
  *
  * Main module of the application.
  */
-angular.module('yoanApp', [ 'ui.router', 'ngResource', 'yoanApp.services' ]);
+angular.module('myLibraryApp', [ 'ui.router', 'ngResource', 'myLibraryApp.services' ]);

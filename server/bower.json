@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "MyLibrary_server",
   "version": "0.0.1",
   "ignore": [
     "**/.*",

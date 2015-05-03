@@ -2,12 +2,12 @@
 
 /**
  * 
- * @name yoanApp.controller:SearchController
+ * @name myLibraryApp.controller:SearchController
  * @description
  * # SearchController
- * Controller of the yoanApp
+ * Controller of the myLibraryApp
  */
-angular.module('yoanApp')
+angular.module('myLibraryApp')
 	.controller('SearchController', function ($scope, $http){
 		// search box to query Google Books API
 		$scope.onTextChange = function (){

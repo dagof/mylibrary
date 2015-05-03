@@ -2,13 +2,13 @@
 
 /**
  * 
- * @name yoanApp.services
+ * @name myLibraryApp.services
  * @description
- * # yoanApp.services
+ * # myLibraryApp.services
  *
  * Main service module of the application.
  */
-angular.module('yoanApp.services', [])
+angular.module('myLibraryApp.services', [])
 	.factory('Subjects', function( $resource ) {
 		return $resource('http://localhost:3000/subjects/:id', { id : '@_id' }, {
 			'update' : { method : 'PUT' }

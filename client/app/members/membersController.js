@@ -2,12 +2,12 @@
 
 /**
  * 
- * @name yoanApp.controller:MembersController
+ * @name myLibraryApp.controller:MembersController
  * @description
  * # MembersController
- * Controller of the yoanApp
+ * Controller of the myLibraryApp
  */
-angular.module('yoanApp')
+angular.module('myLibraryApp')
 	.controller('MembersController', function ($scope, $http, $stateParams){
 		// Start timing now
 		console.time('MembersController.job.timespan');

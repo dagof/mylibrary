@@ -2,13 +2,13 @@
 
 /**
  * 
- * @name yoanApp
+ * @name myLibraryApp
  * @description
- * # yoanApp
+ * # myLibraryApp
  *
  * Main module of the application.
  */
-angular.module('yoanApp')
+angular.module('myLibraryApp')
 	.config(function ($stateProvider, $urlRouterProvider){
 		$stateProvider
 			/*

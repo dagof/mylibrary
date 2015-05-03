@@ -2,12 +2,12 @@
 
 /**
  * 
- * @name yoanApp.controller:SubjectsController
+ * @name myLibraryApp.controller:SubjectsController
  * @description
  * # SubjectsController
- * Controller of the yoanApp
+ * Controller of the myLibraryApp
  */
-angular.module('yoanApp')
+angular.module('myLibraryApp')
 	.controller('SubjectsListController', function ($scope, $state, Subjects, DocumentsCount) {
 		// Start timing now
 		console.time('SubjectsListController.Subjects.query.job.timespan');

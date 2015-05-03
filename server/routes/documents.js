@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 // connection status
 console.log('MongoDB connection status: '+ mongoose.connection.readyState);
 
-//Connect to DB
+// Connect to DB
 if (mongoose.connection.readyState == 0){
 	console.log('Connecting...');
 
@@ -27,9 +27,6 @@ var documents = mongoose.model('documents', schemas.documents);
 
 // normal root
 router.get('/', function(req, res){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-
 	// Start timing now
 	console.time('documents.router.get.job.timespan');
 
@@ -58,12 +55,6 @@ router.get('/', function(req, res){
 	console.log('query: '+ JSON.stringify(req.query));
 	console.log('params: '+ JSON.stringify(req.params));
 
-	var endingTime = new Date().toLocaleTimeString();
-
-	// Times
-	console.log('documents.router.get.job.startingTime: '+ startingTime);
-	console.log('documents.router.get.job.endingTime: '+ endingTime);
-
 	// Stop timer.
 	console.timeEnd('documents.router.get.job.timespan');
 	console.log('\n');
@@ -71,9 +62,6 @@ router.get('/', function(req, res){
 
 // count
 router.get('/count', function(req, res){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-
 	// Start timing now
 	console.time('documents.router.get.count.job.timespan');
 
@@ -101,12 +89,6 @@ router.get('/count', function(req, res){
 				console.log('query: '+ JSON.stringify(req.query));
 				console.log('params: '+ JSON.stringify(req.params));
 
-				var endingTime = new Date().toLocaleTimeString();
-
-				// Times
-				console.log('documents.router.get.count.job.startingTime: '+ startingTime);
-				console.log('documents.router.get.count.job.endingTime: '+ endingTime);
-
 				// Stop timer.
 				console.timeEnd('documents.router.get.count.job.timespan');
 				console.log('\n');
@@ -116,42 +98,30 @@ router.get('/count', function(req, res){
 
 // view all subject's books
 router.get('/subject/:subject', function(req, res){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-
 	// Start timing now
 	console.time('documents.router.get.subject.job.timespan');
 
 	//get all documents on collection
 	documents.find({ subject : req.params.subject }, function(err, docs){
-			if(err) res.json(err)
-			else {
-				//return results
-				res.json(docs);
+		if(err) res.json(err)
+		else {
+			//return results
+			res.json(docs);
 
-				// log
-				console.log('documents.router.get.subject');
-				console.log('query: '+ JSON.stringify(req.query));
-				console.log('params: '+ JSON.stringify(req.params));
+			// log
+			console.log('documents.router.get.subject');
+			console.log('query: '+ JSON.stringify(req.query));
+			console.log('params: '+ JSON.stringify(req.params));
 
-				var endingTime = new Date().toLocaleTimeString();
-
-				// Times
-				console.log('documents.router.get.subject.job.startingTime: '+ startingTime);
-				console.log('documents.router.get.subject.job.endingTime: '+ endingTime);
-
-				// Stop timer.
-				console.timeEnd('documents.router.get.subject.job.timespan');
-				console.log('\n');
-			}
-		});
+			// Stop timer.
+			console.timeEnd('documents.router.get.subject.job.timespan');
+			console.log('\n');
+		}
+	});
 });
 
 // view one document by its ID
 router.get('/view/:id', function(req, res){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-
 	// Start timing now
 	console.time('documents.router.get.viewID.job.timespan');
 
@@ -167,12 +137,6 @@ router.get('/view/:id', function(req, res){
 			console.log('query: '+ JSON.stringify(req.query));
 			console.log('params: '+ JSON.stringify(req.params));
 
-			var endingTime = new Date().toLocaleTimeString();
-
-			// Times
-			console.log('documents.router.get.viewID.job.startingTime: '+ startingTime);
-			console.log('documents.router.get.viewID.job.endingTime: '+ endingTime);
-
 			// Stop timer.
 			console.timeEnd('documents.router.get.viewID.job.timespan');
 			console.log('\n');
@@ -183,9 +147,6 @@ router.get('/view/:id', function(req, res){
 
 // edit/update subject on DB
 router.put('/:id', function(req, res, next){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-
 	// Start timing now
 	console.time('documents.router.put.id.job.timespan');
 
@@ -207,12 +168,6 @@ router.put('/:id', function(req, res, next){
 			console.log('params: '+ JSON.stringify(req.params));
 			console.log('body: '+ JSON.stringify(req.body));
 
-			var endingTime = new Date().toLocaleTimeString();
-
-			// Times
-			console.log('documents.router.put.id.job.startingTime: '+ startingTime);
-			console.log('documents.router.put.id.job.endingTime: '+ endingTime);
-
 			// Stop timer.
 			console.timeEnd('documents.router.put.id.job.timespan');
 			console.log('\n');
@@ -222,9 +177,6 @@ router.put('/:id', function(req, res, next){
 
 // new subject
 router.post('/', function (req, res, next){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-	
 	// Start timing now
 	console.time("documents.router.post.job.timespan");
 
@@ -243,12 +195,6 @@ router.post('/', function (req, res, next){
 			console.log('params: '+ JSON.stringify(req.params));
 			console.log('body: '+ JSON.stringify(req.body));
 
-			var endingTime = new Date().toLocaleTimeString();
-
-			// Times
-			console.log('documents.router.post.job.startingTime: '+ startingTime);
-			console.log('documents.router.post.job.endingTime: '+ endingTime);
-
 			// Stop timer.
 			console.timeEnd('documents.router.post.job.timespan');
 			console.log('\n');
@@ -258,9 +204,6 @@ router.post('/', function (req, res, next){
 
 // delete this document by its ID
 router.delete('/:id', function(req, res, next){
-	// log
-	var startingTime = new Date().toLocaleTimeString();
-
 	// Start timing now
 	console.time("documents.router.delete.id.job.timespan");
 
@@ -278,12 +221,6 @@ router.delete('/:id', function(req, res, next){
 			console.log('query: '+ JSON.stringify(req.query));
 			console.log('params: '+ JSON.stringify(req.params));
 			console.log('body: '+ JSON.stringify(req.body));
-
-			var endingTime = new Date().toLocaleTimeString();
-
-			// Times
-			console.log('documents.router.delete.id.job.startingTime: '+ startingTime);
-			console.log('documents.router.delete.id.job.endingTime: '+ endingTime);
 
 			// Stop timer.
 			console.timeEnd('documents.router.delete.id.job.timespan');

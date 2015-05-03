@@ -2,12 +2,12 @@
 
 /**
  * 
- * @name yoanApp.controller:BookInfoController
+ * @name myLibraryApp.controller:BookInfoController
  * @description
  * # BookInfoController
- * Controller of the yoanApp
+ * Controller of the myLibraryApp
  */
-angular.module('yoanApp')
+angular.module('myLibraryApp')
 	.controller('BookInfoController', function ($scope, $http, $state, $stateParams, Subjects, Documents){
 
 		// Start timing now
@@ -54,6 +54,8 @@ angular.module('yoanApp')
 
 				var bookData = $scope.bookInfo;
 				
+				// Because Google doesn't deliver all data, 
+				// validations have to be applied.
 				var di = {
 					lib_code : ''
 					,doc_type : 'book'
