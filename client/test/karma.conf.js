@@ -66,6 +66,6 @@ module.exports = function(config) {
     //   '/': 'http://localhost:9000/'
     // },
     // URL root prevent conflicts with the site root
-    // urlRoot: '_karma_'
+    urlRoot: '_karma_'
   });
 };

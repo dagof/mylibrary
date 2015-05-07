@@ -145,7 +145,7 @@ router.get('/view/:id', function(req, res){
 });
 
 
-// edit/update subject on DB
+// edit/update document on DB
 router.put('/:id', function(req, res, next){
 	// Start timing now
 	console.time('documents.router.put.id.job.timespan');
@@ -175,12 +175,12 @@ router.put('/:id', function(req, res, next){
 	});
 });
 
-// new subject
+// new document
 router.post('/', function (req, res, next){
 	// Start timing now
 	console.time("documents.router.post.job.timespan");
 
-	// create new subject document into the collection
+	// create new document document into the collection
 	documents.create(req.body, function(err, post){
 		if(err) return next(err);
 		else {

@@ -21,5 +21,5 @@ angular.module('myLibraryApp.services', [])
 		});
 	})
 	.factory('DocumentsCount', function( $resource ) {
-		return $resource('http://localhost:3000/documents/count', { id : '@_id' }, {});
+		return $resource('http://localhost:3000/documents/count');
 	});
